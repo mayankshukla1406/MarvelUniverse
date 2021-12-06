@@ -17,7 +17,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideJokesApi():MarvelApi{
+    fun provideMarvelApi():MarvelApi{
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())

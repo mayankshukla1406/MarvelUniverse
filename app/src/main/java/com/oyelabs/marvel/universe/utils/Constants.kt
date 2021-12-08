@@ -8,8 +8,8 @@ class Constants {
     companion object {
         const val BASE_URL = "https://gateway.marvel.com/"
         val timeStamp = Timestamp(System.currentTimeMillis()).time.toString()
-        const val API_KEY = "881f5dabd4bfa786f3614e3397af79e7"
-        const val PRIVATE_KEY = "a52821a455577983f4e9397051409c985c3d7134"
+        const val API_KEY = "Enter Your Own Key"
+        const val PRIVATE_KEY = "Enter Your Own Key"
         const val limit = "20"
         fun hash(): String {
             val input = "$timeStamp$PRIVATE_KEY$API_KEY"

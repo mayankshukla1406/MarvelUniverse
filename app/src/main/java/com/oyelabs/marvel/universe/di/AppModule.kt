@@ -1,7 +1,9 @@
 package com.oyelabs.marvel.universe.di
 
 import com.oyelabs.marvel.universe.data.data_source.dto.MarvelApi
+import com.oyelabs.marvel.universe.data.repository.MarvelComicRepositoryImpl
 import com.oyelabs.marvel.universe.data.repository.MarvelRepositoryImplementation
+import com.oyelabs.marvel.universe.domain.repository.MarvelComicRepository
 import com.oyelabs.marvel.universe.domain.repository.MarvelRepository
 import com.oyelabs.marvel.universe.utils.Constants
 import dagger.Module
@@ -28,5 +30,11 @@ object AppModule {
     @Singleton
     fun provideMarvelRepository(api:MarvelApi):MarvelRepository{
         return MarvelRepositoryImplementation(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMarvelComicsRepository(api : MarvelApi) : MarvelComicRepository {
+        return MarvelComicRepositoryImpl(api)
     }
 }
